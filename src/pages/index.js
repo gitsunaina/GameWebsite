@@ -16,7 +16,7 @@ const geistMono = localFont({
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
-    router.push('/login'); // Redirect to /login when visiting the home route
+    router.push('/login');
   }, []);
 
   return null;

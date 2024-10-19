@@ -7,13 +7,19 @@ import Icon from "../../../../public/Images/icon.png";
 import plus from "../../../../public/Images/PlusCircle.png";
 import Image from 'next/image';
 
+const MenuItem = ({ href, label }) => (
+  <li>
+    <a href={href} className="text-gray-700 text-[20px] font-semibold">
+      {label}
+    </a>
+  </li>
+);
+
+
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    // Toggle menu open/close
-    const handleMenuToggle = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
+    const handleMenuToggle = () => setIsMenuOpen(!isMenuOpen);
+   
   return (
     <header className="w-full py-[10px] lg:px-0 px-[10px]">
         <div className="mx-auto container">
@@ -42,17 +48,15 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile Menu (dropdown with smooth transition) */}
-          <div
-            className={`absolute z-[99] right-0 w-full mx-auto left-0 mt-4 bg-[rgb(220,196,134)] p-4 rounded-lg shadow-lg md:hidden transition-all duration-500 ease-in-out 
-            ${isMenuOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
-          >
-            <ul className="flex flex-col font-medium mt-4 rounded-lg text-center dark:bg-gray-800 dark:border-gray-700 gap-[20px]">
-              <li><a href="#home" className="text-gray-700 text-[20px] font-semibold">Home</a></li>
-              <li><a href="#games" className="text-gray-700 text-[20px] font-semibold">Games</a></li>
-              <li><a href="#news" className="text-gray-700 text-[20px] font-semibold">News</a></li>
-              <li><a href="#leaderboard" className="text-gray-700 text-[20px] font-semibold">Leaderboard</a></li>
-              <li><a href="#community" className="text-gray-700 text-[20px] font-semibold">Community</a></li>
+          {/* Mobile Menu (dropdown)*/}
+          <div className={`absolute z-[99] right-0 w-full mx-auto left-0 mt-4 bg-[rgb(220,196,134)] p-4 rounded-lg shadow-lg md:hidden transition-all duration-500 ease-in-out 
+            ${isMenuOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+            <ul className="flex flex-col font-medium mt-4 rounded-lg text-center gap-[20px]">
+              <MenuItem href="#home" label="Home" />
+              <MenuItem href="#games" label="Games" />
+              <MenuItem href="#news" label="News" />
+              <MenuItem href="#leaderboard" label="Leaderboard" />
+              <MenuItem href="#community" label="Community" />
             </ul>
           </div>
         </div>
