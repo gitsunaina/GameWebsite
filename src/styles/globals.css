@@ -25,3 +25,132 @@ body {
     text-wrap: balance;
   }
 }
+.hero-section {
+  background: url("../../public/Images/bg-image.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; /* Set the height to full viewport height */
+ 
+  background-attachment: fixed; /* Optional: Creates a parallax effect */
+}
+@media only screen and (max-width: 768px) {
+  .hero-section {
+    background: url("../../public/Images/bg-image.png");/* Load smaller image for mobile */
+    background-size: cover;
+  }
+}
+@media (min-width: 1400px) {
+  .container{
+    max-width: 1194px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+      max-width: 1455px;
+  }
+  .hero-section{
+    height: 100vh;
+  }
+  .slick-slider{
+    padding-top: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+      max-width: 540px;
+  }
+  .hero-section{
+    height: 100%;
+  }
+  .slick-slider{
+    padding-top: 72px;
+  }
+   .secondImage{
+    display: none !important;
+  }
+}
+.slick-slide{
+  float: right !important;
+}
+.slick-slider{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 17px;
+}
+.slider-container{
+  display: flex !important;
+}
+.slick-dots li.slick-active {
+  background-color: #b5b5b5 !important;
+  border-radius: 100px;
+}
+.slick-dots li {
+  height: 6px !important;
+  width: 25px !important;
+  background-color: #403f41 !important  ;
+  margin: 0 !important;
+}
+.slick-dots li:first-child{
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.slick-dots li:last-child {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.slick-dots li button {
+  opacity: 1%;
+}
+.gradient-text{
+  background: linear-gradient(47.52deg, #AE5D23 20.65%, #FFC87F 48.12%, #B1603C 74.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+font-size: 35px;
+font-weight: 400;
+line-height: 46.6px;
+letter-spacing: 0.02em;
+text-align: left;
+position: absolute;
+bottom: 9px;
+left: 76px;
+}
+
+.custom-text {
+  font-family: Calibri, sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
+  letter-spacing: 0.02em;
+  text-align: center;
+  
+
+  /* Text gradient */
+  background: linear-gradient(103.54deg, #D7BC93 0%, #71634D 50%, #D7BC93 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+@media (max-width: 640px) {
+  .custom-text {
+    font-size: 0.875rem; 
+  }
+}
+
+.slick-dots{
+  bottom: -4px !important;
+}
+
